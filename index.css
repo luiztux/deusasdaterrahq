@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Matura MT Script Capitals';
+    src: url('font/MaturaMTScriptCapitals.woff2') format('woff2'),
+        url('font/MaturaMTScriptCapitals.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FreeFontPro';
+    src: url('font/FreeFontPro.woff2') format('woff2'),
+        url('font/FreeFontPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --header-skew-transform: skew(-37deg, 0deg);
+    --header-rotate-transform: rotate(-5deg);
+    --header-scale-transform: scale(1.6, 2);
+    --header-translate-transform: translate(0px, 0px);
+    --red: #C21E01;
+    --jet: #2f2c2c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.diagonal__box {
+    display: flex;
+    position: relative;
+    height: 20rem;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    margin-top: -7%;
+    background: url('images/logo_hq.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    border-bottom: 6px solid var(--jet);
+    transform: skewY(-8deg) scale(1);
+    -moz-transform: skewY(-8deg) scale(1);
+    opacity: 0.5;
+}
+
+.site__title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-family: 'Matura MT Script Capitals';
+    font-size: 8rem;
+    color: var(--red);
+    word-spacing: 0.125rem;
+    letter-spacing: 0.313rem;
+    width: 35rem;
+    text-align: center;
+    padding: 5px;
+    position: absolute;
+    top: -20rem;
+}
+
+.first__section {
+    display: flex;
+    position: relative;
+    top: -5rem;
+    justify-content: space-between;
+}
+
+.authors {
+    display: flex;
+    justify-content: center;
+    flex-grow: 4;
+}
+
+.authors > div {
+    border: 6px solid var(--jet);
+    width: 20%;
+    padding: 10px;
+}
+
+.authors > div > p {
+    text-align: center;
+    font-family: 'FreeFontPro';
+    font-size: 1.5rem;
+}
+
+.social__links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: end;
+    padding: 5px 10px;
+    /* margin-right: 20px; */
+}
+
+.social__links > a {
+    text-decoration: none;
+    color: var(--jet);
+    font-size: 1.8rem;
+}
