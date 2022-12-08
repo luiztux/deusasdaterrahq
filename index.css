@@ -24,6 +24,8 @@
     --red: #C21E01;
     --jet: #2f2c2c;
     --terra-cota: #D3766A;
+    --orange: #BA5624;
+    --purple: #8980F5;
 }
 
 ::-webkit-scrollbar {
@@ -54,9 +56,10 @@
 body {
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: 'FreeFontPro';
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -66,7 +69,7 @@ p,
 span {
     font-family: 'FreeFontPro';
 }
-
+ */
 .diagonal__box {
     display: flex;
     position: relative;
@@ -125,6 +128,7 @@ span {
     border: 6px solid var(--jet);
     width: 30%;
     padding: 10px;
+
 }
 
 .authors > div > p {
@@ -152,6 +156,27 @@ span {
 .second__section {
     position: relative;
     display: flex;
+    flex-direction: column;
+    background: var(--terra-cota);
+    border: 6px solid var(--jet);
+}
+
+.shadow__presentation__title {
+    font-size: 7rem;
+    text-align: center;
+    opacity: 0.4;
+    color: white;
+    text-shadow: 2px 1px var(--jet);
+    position: relative;
+    top: 1rem;
+}
+
+.diagonal__presentation {
+    position: relative;
+    transform: skewY(1deg);
+    -moz-transform: skewY(1deg);
+    background: var(--terra-cota);
+    height: 10rem;
 }
 
 .character {
@@ -161,5 +186,47 @@ span {
 }
 
 .character > img {
+    width: auto;
     max-height: 40rem;
+}
+
+.container__presentation__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 3rem;
+    padding-top: 3rem; */
+}
+
+.container__presentation__title > h2 {
+    color: white;
+    text-shadow: 4px 4px var(--jet);
+    font-size: 3rem;
+    position: relative;
+    top: 4rem;
+}
+
+.container__presentation__text {
+    border: 6px solid var(--jet);
+    position: relative;
+    top: 2rem;
+    display: flex;
+    background: var(--orange);
+}
+
+.diagonal__section {
+    position: absolute;
+    transform: skewY(-5deg);
+    -moz-transform: skewY(-5deg);
+}
+
+.presentation__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border: 3px solid var(--jet);
+    background: white;
+    width: 50rem;
+    padding: 10px;
 }
