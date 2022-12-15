@@ -2,18 +2,16 @@
     font-family: 'Matura MT Script Capitals';
     src: url('font/MaturaMTScriptCapitals.woff2') format('woff2'),
         url('font/MaturaMTScriptCapitals.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
     font-display: swap;
+    size-adjust: 150%;
 }
 
 @font-face {
     font-family: 'FreeFontPro';
     src: url('font/FreeFontPro.woff2') format('woff2'),
         url('font/FreeFontPro.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
     font-display: swap;
+    size-adjust: 100%;
 }
 
 :root {
@@ -26,8 +24,10 @@
     --terra-cota: #D3766A;
     --orange: #BA5624;
     --purple: #8980F5;
+    --maximum-yellow: #FAFE41;
     --body-background-color: #fefae0;
     --body-font-family: 'FreeFontPro';
+    --comics-border: .625rem solid var(--jet);
 }
 
 ::-webkit-scrollbar {
@@ -62,7 +62,8 @@ body {
     background-color: var(--body-background-color);
 }
 
-.mt-1 {
+
+/* .mt-1 {
     margin-top: .25rem;
 }
 
@@ -470,28 +471,102 @@ body {
 
 .align-items-end {
     align-items: end;
+} */
+
+
+.hero {
+    position: relative;
+    height: 60vh;
+}
+
+.hero__background {
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .lines {
-    position: relative;
-    top: -50rem;
+    position: absolute;
+    top: -130px;
+    width: 35vw;
+}
+
+.title__container {
+    position: absolute;
+    width: 100%;
 }
 
 .title__baloon {
-    position: relative;
-    top: -90rem;
+    position: absolute;
+    top: 0px;
+    width: 64vw;
 }
 
 .site__title {
-    position: relative;
-    top: -120rem;
+    position: absolute;
+    top: 120px;
+    padding: 1.5rem;
 }
 
 .site__title h1 {
     font-family: 'Matura MT Script Capitals';
-    font-size: 8.300rem;
+    font-weight: 800;
+    font-size: calc(5rem + 2vw);
+    text-align: center;
     color: var(--red);
     word-spacing: 0.125rem;
     letter-spacing: 0.313rem;
-    width: 30vw;
+    width: 100%;
+}
+
+.social__container {
+    position: relative;
+    width: 100vw;
+}
+
+.social {
+    border: var(--comics-border);
+    background-color: var(--maximum-yellow);
+    text-align: center;
+}
+
+.social > span {
+    font-size: 1.5rem;
+}
+
+.social__text {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.icons {
+    color: var(--jet);
+    font-size: 3.125rem;
+}
+
+.authors__container {
+    border: var(--comics-border);
+    background: linear-gradient(89.7deg, #BD2727 -8.23%, #FF812A 108.27%, #FF812A 108.27%);
+}
+
+.authors__box {
+    position: relative;
+    top: -1.500rem;
+    background-color: var(--jet);
+    height: 5vh;
+}
+
+.authors__box span {
+    font-size: 1.400rem;
+    font-weight: 800;
+}
+
+.authors__text {
+    position: relative;
+    top: -2rem;
+    left: -20rem;
+}
+
+.authors__text span {
+    font-size: 1.875rem;
 }
