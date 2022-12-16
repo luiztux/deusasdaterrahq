@@ -25,6 +25,7 @@
     --orange: #BA5624;
     --purple: #8980F5;
     --maximum-yellow: #FAFE41;
+    --tart-orange: #FF3E3F;
     --body-background-color: #fefae0;
     --body-font-family: 'FreeFontPro';
     --comics-border: .625rem solid var(--jet);
@@ -561,12 +562,51 @@ body {
     font-weight: 800;
 }
 
+
 .authors__text {
     position: relative;
     top: -2rem;
-    left: -20rem;
+    left: -23rem;
 }
 
 .authors__text span {
     font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.presentation__container {
+    background-image: url(images/svg/circles.svg);
+    background-color: var(--tart-orange);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: var(--comics-border);
+}
+
+.presentation__content {
+    position: relative;
+}
+
+.presentation__text {
+    border: .25rem solid var(--jet);
+    background-color: white;
+    box-shadow: 1rem 1.1875rem .0625rem .3125rem var(--jet);
+}
+
+.presentation__text span {
+    font-size: 5rem;
+    color: var(--tart-orange);
+    text-shadow: .1875rem .3125rem .1875rem var(--jet);
+    text-transform: uppercase;
+}
+
+.presentation__character {
+    position: relative;
+}
+
+.mirela {
+    width: 20vw;
+}
+
+.text__balloons {
+    
 }
